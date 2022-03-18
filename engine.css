@@ -1,0 +1,449 @@
+.mi-be-datepicker-select .DateRangePicker_picker,  .mi-be .mi-dropdown .mi-dropdown-layout {z-index: 1050;} 
+
+/* VARIABLES MOBILE */
+:root {
+    --corporative-color: #8a3230; /* primary button bg */
+    --text-color__over-corporative-color: #fff; /* primary button color */
+    --corporative-text-color: #8a3230; /* links color */
+    --border-radius: 0px;
+}
+
+/* Contola el Width de los campos con estas reglas */
+
+    /* Chain selector */
+    [data-mirai-engine='mirai_be'] .mi-be-chain-select .mi-be-chain-field label {
+        width: 150px;
+    }
+    /* Date picker */
+    [data-mirai-engine='mirai_be'] .mi-be-datepicker-select .DateRangePickerInput .DateInput {
+    }
+    /* Multiroom */
+    [data-mirai-engine='mirai_be'] .mi-be-multiroom-select .mi-be-multiroom-field label {
+    }
+    /* Promo Code */
+    [data-mirai-engine='mirai_be'] .mi-be-promo-field label input {
+    }
+
+    /* Chain selector - Dropdown */
+    [data-mirai-engine='mirai_be'] .mi-be-chain-select .mi-be-chain-dropdown {
+        width: 250px;
+    }
+
+/* -------------------------------------------------------------------- */
+
+body.bookingstep, body.mi-chain_results {
+    margin: 0;
+    font-family: Poppins, Arial;
+}
+
+body.bookingstep [data-mirai-engine='mirai_be'], body.club [data-mirai-engine='mirai_be'] {
+    background: #d7d7d7;
+    padding: 10px 0;
+}
+
+/* engine container */
+[data-mirai-engine='mirai_be'] .mi-be {
+    background: transparent;
+    font-size: 14px;
+    color: #3D3D3D;
+}
+
+/* input fields (common styles) */
+[data-mirai-engine='mirai_be'] .mi-be-chain-field,
+[data-mirai-engine='mirai_be'] .DateRangePickerInput,
+[data-mirai-engine='mirai_be'] .mi-be-multiroom-field,
+[data-mirai-engine='mirai_be'] .mi-be-promo-field {
+    padding: 10px;
+    background-color: #fff;
+    margin-right: 5px;
+    /*border: 0;*/
+    /*border-radius: 0;*/
+}
+
+/* input elements and button height */
+[data-mirai-engine='mirai_be'] .mi-dropdown .mi-dropdown-button label,
+[data-mirai-engine='mirai_be'] .mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input,
+[data-mirai-engine='mirai_be'] .mi-be-promo-field label input,
+[data-mirai-engine='mirai_be'] .mi-be-book-btn {
+    line-height: 50px; /* optional */
+    height: 50px; /* same than line-height - ie11 fix */
+}
+
+
+/* placeholders */
+
+/*
+[data-mirai-engine='mirai_be'] .mi-be .mi-dropdown .mi-dropdown-placeholder,
+[data-mirai-engine='mirai_be'] .mi-be input[type=text]::-webkit-input-placeholder {color: #999;}
+[data-mirai-engine='mirai_be'] .mi-be input[type=text]::-moz-placeholder {color: #999;}
+[data-mirai-engine='mirai_be'] .mi-be input[type=text]:-moz-placeholder {color: #999;}
+[data-mirai-engine='mirai_be'] .mi-be input[type=text]:-ms-input-placeholder {color: #999;}
+*/
+
+
+/* ICONS */
+
+/* info icons (date picker, multiroom & promo) */
+[data-mirai-engine='mirai_be'] .mi-be .mi-be-datepicker-select .DateRangePickerInput .DateRangePickerInput_calendarIcon,
+[data-mirai-engine='mirai_be'] .mi-be .mi-be-multiroom-field span.mi-ico-dropdown,
+[data-mirai-engine='mirai_be'] .mi-be .mi-be-promo-field span.mi-ico-code {
+    font-size: 16px;
+    color: #9d5d41;
+}
+
+/* date picker arrow */
+[data-mirai-engine='mirai_be'] .mi-be-datepicker-select .DateRangePickerInput .DateRangePickerInput_arrow svg {
+    fill: #999;
+}
+
+/* dropdowns arrows */
+[data-mirai-engine='mirai_be'] .mi-be .mi-dropdown .mi-dropdown-button .mi-ico-arrow-down-dark {
+    color: #999; /* same color than date picker arrow */
+}
+
+
+/* DATEPICKER (engine & no dispo) */ 
+
+/* selected & hover dates */
+.CalendarDay__default:hover,
+[class*="CalendarDay__selected"],
+.CalendarDay__hovered_span,
+.CalendarDay__hovered_span:active,
+.mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input__focused,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-main .mi-be-modal-fields input.DateInput_input__focused {
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
+    background-color: #AD706F;
+    color: #555;
+}
+
+
+/* placeholder selected input in datepicker - (same color than "selected & hover dates") */
+
+.mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input__focused::placeholder {color: #555;}
+.mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input__focused::-webkit-input-placeholder {color: #555;}
+.mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input__focused:-moz-placeholder {color: #555;}
+.mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input__focused:-ms-input-placeholder {color: #555;}
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-main .mi-be-modal-fields input[type=text].DateInput_input__focused::placeholder {color: #555;}
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-main .mi-be-modal-fields input[type=text].DateInput_input__focused::-webkit-input-placeholder {color: #555;}
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-main .mi-be-modal-fields input[type=text].DateInput_input__focused:-moz-placeholder {color: #555;}
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-main .mi-be-modal-fields input[type=text].DateInput_input__focused:-ms-input-placeholder {color: #555;}
+
+
+
+/* last selected day */ 
+.CalendarDay__selected_end,
+.CalendarDay__selected_end:hover {
+    background-color: #8a3230;
+    color: #eee;
+}
+
+
+/* ALL ACTION BUTTONS (Book included) - only appearance, none position/display or padding/margin or font appearance */
+[class^=mi-] .mi-s-color-button,
+.mi-be .mi-be-book-btn,
+.mi-rs .mi-rs-cart-btn,
+.mi-rs .mi-rs-add-btn,
+.mi-rs .mi-na-option-date-btn,
+.mi-rs .mi-na-option-hotel-btn,
+.mi-rs .mi-cf-form-data-btn,
+button.mi-modal-close-btn,
+.mi-rs .mi-rs-rate-select-room-btn,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-multiroom-footer .mi-be-multiroom-footer-confirm,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-footer .mi-be-date-picker-confirm {
+    background-color: #8a3230;
+    color: #fff;
+    border-radius: 0;
+    border: 0;
+    -webkit-transition: .3s all;
+    transition: .3s all;
+    /* don't add more properties use "engine booking button styles" */
+}
+
+[class^=mi-] .mi-s-color-button:hover,
+.mi-be .mi-be-book-btn:hover,
+.mi-rs .mi-rs-cart-btn:hover,
+.mi-rs .mi-rs-add-btn:hover,
+.mi-rs .mi-na-option-date-btn:hover,
+.mi-rs .mi-na-option-hotel-btn:hover,
+.mi-rs .mi-cf-form-data-btn:hover,
+button.mi-modal-close-btn:hover,
+.mi-rs .mi-rs-rate-select-room-btn:hover,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-multiroom-footer .mi-be-multiroom-footer-confirm:hover,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-modal-footer .mi-be-date-picker-confirm:hover {
+    background-color: #AD706F;
+}
+
+/* ENGINE BOOKING BUTTON */
+.mi-be .mi-be-book-btn {
+    
+}
+
+
+/* ------------- BOOKING PROCESS ------------- */
+
+/* LINKS */
+
+/* general links (same color than web links) */
+.mi-s-color-link,
+.mi-s-color-link-wrapper a,
+.mi-rs .mi-rs-room-occupation-btn,
+.mi-rs .mi-rs-room-detail-btn,
+.mi-rs-rate-see-more-btn,
+.mi-rs-suggestion-btn,
+.react-tabs [role=tab][aria-selected=true],
+.react-tabs [role=tab]:hover,
+.mi-rs-modal-occupation-btn:hover .mi-rs-occupation-text-legend span:first-child, 
+.mi-rs-modal-occupation-btn.selected .mi-rs-occupation-text-legend span:first-child, 
+.mi-rs-modal-occupation-btn.people:hover, 
+.mi-rs-modal-occupation-btn.people.selected,
+.mi-rs-back-to-room-selection,
+.mi-na-view-all-results,
+.mi-rs-cart-item-edit-btn,
+.mi-be-datepicker-info-panel .mi-be-datepicker-clear-dates button,
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown ul li .mi-be-multiroom-title .mi-be-multiroom-remove,
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown .mi-be-multiroom-footer  .mi-be-multiroom-footer-add,
+.mi-na-option-hotel > h4,
+.mi-rs .mi-cancelation-payment-link,
+.mi-rs .mi-privacy-policy-link,
+.mi-rs .mi-cf-form-data-link-back,
+.mi-rs .mi-cf-error-link-back,
+.mi-cf-form-data form .mi-cf-form-data-additionals div[class*="mi-cf-form-data-additionals-"] a,
+.mi-rs .mi-rc-btn,
+.mi-rc-reservation-address .mi-rc-reservation-address-mail-link,
+.mi-rc-reservation-address .mi-rc-reservation-address-web-link,
+.mi-rs .mi-rc-reservation-code .mi-rc-reservation-code-expired-link,
+.mi-be-modal .mi-be-modal-header button.mi-be-modal-clear-date {
+    color: #8a3230;
+}
+
+/* links hover */
+.mi-s-color-link:hover,
+.mi-s-color-link-wrapper a:hover,
+.mi-rs .mi-rs-room-occupation-btn:hover,
+.mi-rs .mi-rs-room-detail-btn:hover,
+.mi-rs-rate-see-more-btn:hover,
+.mi-rs-suggestion-btn:hover,
+.mi-rs-back-to-room-selection:hover,
+.mi-na-view-all-results:hover,
+.mi-rs-cart-item-edit-btn:hover,
+.mi-be-datepicker-info-panel .mi-be-datepicker-clear-dates button:hover,
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown ul li .mi-be-multiroom-title .mi-be-multiroom-remove:hover,
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown .mi-be-multiroom-footer  .mi-be-multiroom-footer-add:hover, 
+.mi-na-option-hotel > h4:hover,
+.mi-rs .mi-cancelation-payment-link:hover,
+.mi-rs .mi-privacy-policy-link:hover,
+.mi-rs .mi-cf-form-data-link-back:hover,
+.mi-rs .mi-cf-error-link-back:hover,
+.mi-cf-form-data form .mi-cf-form-data-additionals div[class*="mi-cf-form-data-additionals-"] a:hover,
+.mi-rs .mi-rc-btn:hover,
+.mi-rc-reservation-address .mi-rc-reservation-address-mail-link:hover,
+.mi-rc-reservation-address .mi-rc-reservation-address-web-link:hover,
+.mi-rs .mi-rc-reservation-code .mi-rc-reservation-code-expired-link:hover,
+.mi-be-modal .mi-be-modal-header button.mi-be-modal-clear-date:hover {
+    color: #7b88a8;
+}
+
+/* selected & hovered occupation (room selection), selected tab, +/- multiroom buttons, radio & checkbox */
+.mi-rs-modal-occupation-btn:hover,
+.mi-rs-modal-occupation-btn.selected,
+.react-tabs [role=tab][aria-selected=true],
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown ul li .mi-be-multiroom-option-adult span.react-numeric-input b,
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown ul li .mi-be-multiroom-option-children span.react-numeric-input b,
+.mi-radio-container input[type="radio"]:checked + .mi-radio-ico:before,
+.mi-checkbox-container input[type="checkbox"]:checked + .mi-checkbox-ico:before,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-multiroom-footer .mi-be-multiroom-footer-add,
+.mi-be.mi-be-mobile .mi-be-modal .mi-be-multiroom-footer .mi-be-multiroom-footer-confirm {
+    border-color: #8a3230 !important; /* color links */
+}
+
+/* +/- multiroom buttons, checked checkbox */
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown ul li .mi-be-multiroom-option-adult span.react-numeric-input b i,
+.mi-be .mi-be-multiroom-select .mi-be-multiroom-dropdown ul li .mi-be-multiroom-option-children span.react-numeric-input b i,
+.mi-checkbox-container input[type="checkbox"]:checked + .mi-checkbox-ico:before {
+    background-color: #8a3230 !important; /* color links */
+}
+
+/* CORPORATIVE DETAILS (principal color) */
+/* line on client form, input focused at client form, selected credit card */
+div[data-mirai-engine="mirai_cf"] .mi-rs,
+div[data-mirai-engine="mirai_mr"] .mi-rs,
+.mi-rs .mi-field-group.focused .mi-input-text,
+.mi-rs .mi-field-group.focused .mi-textarea,
+.mi-cf-form-data form .mi-cf-form-data-payment .mi-cf-form-data-payment-title img.selected,
+.mi-rc-reservation-code,
+.mi-rc-reservation-address,
+.mi-rc-reservation-data,
+.mi-rc-reservation-detail,
+.mi-rc-reservation-price,
+.mi-rc-reservation-payment,
+.mi-rc-reservation-cancellation,
+.mi-rc-reservation-privacy  {
+    border-color: #8a3230;
+}
+
+/* LOADING booking proccess (principal color) */
+.mi-rs.loading .mi-loading .mi-loading-scope .mi-loading-icon div {
+    border-color: #8a3230 transparent #8a3230 transparent;
+}
+
+/* ----------------- ENGINE IN SQUARE ----------------- */
+
+.mi-be-square {
+    text-align: center;
+}
+
+.mi-be-square {
+    display: inline-block;
+    max-width: 100%;
+    /* chain selector needs width, same than data range picker */
+    /*width: 313px;*/
+}
+
+.mi-be-square .mi-be-mobile {
+    display: block;
+}
+
+/* fields wrappers */
+.mi-be-square .mi-be-chain-field,
+.mi-be-square .mi-be-datepicker-select,
+.mi-be-square .mi-dropdown,
+.mi-be-square .mi-be-promo-field,
+.mi-be-square .mi-be-book-btn {
+    display: block;
+}
+
+/* input fields */
+.mi-be-square .mi-be .mi-be-chain-field,
+.mi-be-square .mi-be .DateRangePickerInput,
+.mi-be-square .mi-be .mi-be-multiroom-field,
+.mi-be-square .mi-be .mi-be-promo-field {
+    margin-right: 0;
+    margin-bottom: 5px;
+    text-align: left;
+    padding: 10px 20px;
+}
+
+/* input elements */
+.mi-be-square .mi-be .mi-dropdown .mi-dropdown-button label,
+.mi-be-square .mi-be .mi-be-datepicker-select .DateRangePickerInput .DateInput .DateInput_input,
+.mi-be-square .mi-be .mi-be-promo-field label input,
+.mi-be-square .mi-be .mi-be-book-btn {
+    line-height: 3em;
+    height: 3em;  /* same than line-height - ie11 fix */
+}
+
+/* button */
+.mi-be-square .mi-be .mi-be-book-btn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* info icons */
+.mi-be-square .mi-be .mi-be-datepicker-select .DateRangePickerInput .DateRangePickerInput_calendarIcon,
+.mi-be-square .mi-be .mi-be-multiroom-field span.mi-ico-dropdown,
+.mi-be-square .mi-be .mi-be-promo-field span.mi-ico-code {
+    font-size: 1.6em;
+}
+
+/* icon arrow position */
+.mi-be-square .mi-be .mi-dropdown .mi-dropdown-button .mi-ico-arrow-down-dark {
+    position: absolute;
+    right: 20px; /* same than field wrappers horizontal padding */
+    top: 50%;
+    margin-top: -7px; /* negative half font-size */
+}
+
+/* input selectors (icon arrow has changed) */
+.mi-be-square .mi-be .mi-dropdown .mi-dropdown-button > *:nth-last-child(2) {
+    margin-right: 0;
+    padding-right: 25px;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: auto;
+}
+
+
+/* TRANSLATE CONTENT */
+
+.translated-content>*{
+	display: none;
+}
+
+.translated-content.es>[class*='-es'],
+.translated-content.en>[class*='-en'],
+.translated-content.fr>[class*='-fr'],
+.translated-content.de>[class*='-de'],
+.translated-content.it>[class*='-it'],
+.translated-content.pt>[class*='-pt'],
+.translated-content.pl>[class*='-pl'],
+.translated-content.ru>[class*='-ru'],
+.translated-content.jp>[class*='-jp'],
+.translated-content.ca>[class*='-ca'],
+.translated-content.da>[class*='-da'],
+.translated-content.sv>[class*='-sv'],
+.translated-content.nl>[class*='-nl'],
+.translated-content.zh>[class*='-zh'],
+.translated-content.tr>[class*='-tr'],
+.translated-content.fl>[class*='-fl'],
+.translated-content.no>[class*='-no']{
+	display: block;
+}
+
+/* MEDIA QUERIES */
+
+/* Small screens like iPad Portrait */
+@media (min-width: 768px) and (max-width: 979px) {
+    [data-mirai-engine='mirai_be'] .mi-be .mi-be-promo-field label input {
+        width: 4em;
+    }
+}
+
+/* iphone portrait & landscape - galaxy portrait & lanscape */
+@media (max-device-width: 767px) {
+    /* motor wrapper - for display */
+    div[data-mirai-engine="mirai_be"][data-device="mobile"] {
+    }
+    /* trigger button opens modal */
+    [data-mirai-engine='mirai_be'] .mi-be.mi-be-mobile .mi-be-book-btn.mi-be-book-btn-trigger {
+    }
+    [data-mirai-engine='mirai_be'] .mi-be.mi-be-mobile {
+        font-size: calc(1px + 3.8vw); /* 13px - 16px */
+    }
+}
+
+
+/* ================================= */
+
+/*Styles for bookingstep*/
+.bookingstep #header, .mi-chain_results #header {
+    background-color: #fff;
+}
+.bookingstep #logo, .club #logo, .mi-chain_results #logo {
+    margin: 0 auto;
+    width:500px;
+    padding: 25px 0;
+}
+ 
+.bookingstep #logo a, .club #logo a, .mi-chain_results #logo a {
+    display: block;
+    margin: 0 auto;
+/*start logo_*/
+    background: url("logoLaQuintadeAmat.png") no-repeat transparent;
+	background-size: contain;
+	background-position: center;
+    height: 150px;
+    width: auto;
+/*end logo_*/
+}
+
+#m-chain-result-wrapper {
+    padding-top: 30px;
+}
+
+
+
